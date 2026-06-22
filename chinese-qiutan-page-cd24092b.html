@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>球探体育 · 赛事资料整理站</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #fafbfc;
+      color: #1e2a3a;
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.4rem 1.5rem 3.6rem;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0d1b2a;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #4a5a6e;
+      max-width: 560px;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      margin-top: 0.8rem;
+      background: #eef1f5;
+      color: #1f2e44;
+      font-size: 0.85rem;
+      padding: 0.2rem 0.9rem;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    /* 优势区 */
+    .strength-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem 1.8rem;
+      margin: 2.6rem 0 2.8rem;
+    }
+
+    .strength-item {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.2rem 1.4rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.15s;
+    }
+
+    .strength-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .strength-item .emoji {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .strength-item h3 {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+      color: #0d1b2a;
+    }
+
+    .strength-item p {
+      font-size: 0.9rem;
+      color: #4f5f72;
+      line-height: 1.5;
+    }
+
+    /* 说明区 */
+    .about-section {
+      background: #f3f6fa;
+      border-radius: 20px;
+      padding: 1.8rem 1.8rem 2rem;
+      margin: 2.2rem 0;
+    }
+
+    .about-section h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #14212e;
+    }
+
+    .about-section p {
+      font-size: 0.98rem;
+      color: #334356;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section a {
+      color: #1d4f7c;
+      text-decoration: none;
+      border-bottom: 1px solid #b6c9de;
+      transition: border-color 0.2s;
+    }
+
+    .about-section a:hover {
+      border-bottom-color: #1d4f7c;
+    }
+
+    /* faq 摘要 */
+    .faq-summary {
+      margin: 2.6rem 0 2.2rem;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #0d1b2a;
+    }
+
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #e6eaef;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: #1f2e44;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: #55677c;
+      line-height: 1.5;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      margin-top: 3.2rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #e2e7ee;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #4d5f74;
+    }
+
+    .footer-links a {
+      color: #1d4f7c;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-meta {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #76889e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      .page {
+        padding: 1.8rem 1.2rem 2.8rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .strength-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .about-section {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <section class="hero">
+    <h1>流览赛事信息，从一份整理开始</h1>
+    <p><a href="https://chinese-qiutan.com" style="color:#0d1b2a; text-decoration:underline; text-underline-offset:3px; text-decoration-color:#bcc9db;">球探体育</a> 收录了多维度比赛的背景数据、近期动态与参考资料，方便你按自己的节奏去翻阅、比对。</p>
+    <span class="tagline">资料索引 · 中立视角</span>
+  </section>
+
+  <!-- 优势区 -->
+  <section class="strength-grid">
+    <div class="strength-item">
+      <span class="emoji">📋</span>
+      <h3>分类陈列</h3>
+      <p>按联赛、杯赛、俱乐部等维度整理条目，减少到处翻找的麻烦。</p>
+    </div>
+    <div class="strength-item">
+      <span class="emoji">🔍</span>
+      <h3>关键词直达</h3>
+      <p>页面内搜索功能帮你快速定位某支队伍或某轮数据，省时省力。</p>
+    </div>
+    <div class="strength-item">
+      <span class="emoji">🧩</span>
+      <h3>多源参考</h3>
+      <p>综合各方公开信息，不做二次解读，只呈现可查证的原始内容。</p>
+    </div>
+    <div class="strength-item">
+      <span class="emoji">📅</span>
+      <h3>时间轴梳理</h3>
+      <p>按时间顺序排列关键节点，让赛程、转会、伤停一目了然。</p>
+    </div>
+  </section>
+
+  <!-- 说明区 -->
+  <section class="about-section">
+    <h2>为什么做资料整理</h2>
+    <p>每天接触大量比赛信息，容易淹没在片段式的快讯里。我们更倾向于把零散的数据、背景故事、赛前简报归拢到一起，形成一个可回溯的资料夹。这里没有自动生成的预测，也没有过度加工的结论，只有分类清晰的原始文本与链接。</p>
+    <p>无论是想回顾某场经典对决的阵容，还是想对比不同球队的近期走势，你都可以在 <a href="https://chinese-qiutan.com">球探体育</a> 找到对应的归档页。我们不标榜“最全”，但力求每一条记录都有来源、有日期、有上下文。</p>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section class="faq-summary">
+    <h2>一些常见问题 · 摘要</h2>
+    <div class="faq-item">
+      <div class="faq-question">资料更新频率怎样？</div>
+      <div class="faq-answer">主要比赛日之后 12–24 小时内会进行内容补充，重大转会或突发事件视情况尽快收录。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">可以下载或离线浏览吗？</div>
+      <div class="faq-answer">页面基于标准 Web 构建，你可以用浏览器打印或保存为 PDF，部分列表页支持复制文本。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">是否包含深度分析文章？</div>
+      <div class="faq-answer">以资料汇编为主，偶尔会整理第三方报道的摘要并附上原文链接，不生产独家战术解读。</div>
+    </div>
+  </section>
+
+  <!-- 底部链接 -->
+  <footer class="footer-links">
+    <p>浏览经过整理的赛事资料，可以前往 <a href="https://chinese-qiutan.com">球探体育</a> 查阅具体页面。</p>
+    <p class="footer-meta">仅作信息索引 · 所有内容源自公开数据</p>
+  </footer>
+
+</div>
+</body>
+</html>
